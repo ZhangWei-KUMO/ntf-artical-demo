@@ -207,11 +207,10 @@
                                     <img src="images/digital-${i}.jpg" alt="/" class="rounded-top">     
                                 </div>
                                 <div class="rounded-bottom blog-content p-4 text-center">
-									<h5><a href="blog-single-01.html" target="_blank" class="text-dark">
+									<h5>
 										${item.title}
-										</a>
-										</h5>
-
+									</h5>
+                                    <h5>起拍价：${item.price}</h5>
                                     <div class="blog-section-author">
                                         <span> 作者: ${item.author} </span>
                                         |
@@ -223,7 +222,7 @@
                                         <span> 区块链: ${item.blockchain}</span>
                                     </div>
                                     <div class="blog-link mt-4">
-                                        <a class="btn btn-sm" href="/details?id=${item.hash}.html" target="_blank">我要拍卖</a>
+                                        <a class="btn btn-sm" href="/details.html?id=${i}" target="_blank">我要拍卖</a>
                                     </div>
                                 </div>
                             </div>
