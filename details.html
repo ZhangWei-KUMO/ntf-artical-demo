@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html lang="en"> 
 <head>
 
     <!-- Basic Page Needs
@@ -45,43 +42,37 @@
 					<div class="row wrap-box"><!--Start Box-->
 						<div class="col-1-2">
 							<div class="box-text bg-2">
-								<div class="heading">
-									<h2>Everything<br> About Me</h2>
+								<div class="heading" id="title">
+									
 								</div>
-								<div class="content">
-									<p>Meet the most advanced live website builder on WordPress. Featuring latest web technologies, enjoyable UX and the most beautiful design trends. Simply drag&drop elements around, choose styles and see the result instantly… You can literally create a whole website in minutes!</p>
+								<div class="content" id="description">
+									
 								</div>
 							</div>
 						</div>
 						<div class="col-1-2">
 							<div class="box-text bg-3">
-								<div class="heading">
-									<span class="prefix">25</span>
-									<h2>Year Of My<br> Experience</h2>
+								<div class="heading" id="author">
+									<span class="prefix"></span>
 								</div>
-								<div class="content">
-									<p>Massive Dynamic has over 10 years of experience in Design, Technology and Marketing. We take pride in delivering Intelligent Designs and Engaging Experiences for clients all over the World.</p>
-								</div>
-							</div>
-						</div>
-                        <div class="col-1-2">
-							<div class="box-text bg-3">
-								<div class="heading">
-									<span class="prefix">25</span>
-									<h2>Year Of My<br> Experience</h2>
-								</div>
-								<div class="content">
-									<p>Massive Dynamic has over 10 years of experience in Design, Technology and Marketing. We take pride in delivering Intelligent Designs and Engaging Experiences for clients all over the World.</p>
+								<div class="content" id="content">
+								
 								</div>
 							</div>
 						</div>
                         <div class="col-1-2">
+							<div class="bg-2" id="location" style="display: table-cell;
+							vertical-align: middle;background: rgba(0, 0, 0, .65);height: 470px;">
+								
+							</div>
+						</div>
+						<div class="col-1-2">
 							<div class="box-text bg-2">
-								<div class="heading">
-									<h2>Everything<br> About Me</h2>
+								<div class="heading" id="holder">
+									<h2>实物存放地：边界数库</h2>
 								</div>
-								<div class="content">
-									<p>Meet the most advanced live website builder on WordPress. Featuring latest web technologies, enjoyable UX and the most beautiful design trends. Simply drag&drop elements around, choose styles and see the result instantly… You can literally create a whole website in minutes!</p>
+								<div class="content" id="holder-details">
+									<p>边界三亚数字资产仓库位于风景优美的海南自贸区，仓库总面积7000平方，常年温湿度的范围温度在15～25℃,湿度30%～60%之间。配套50台恒温恒湿箱，200多台除湿机。为每件艺术品配备专门的存放入档箱。数字资产的用户可以持加密卡提取资产现货。</p>
 								</div>
 							</div>
 						</div>
@@ -103,20 +94,23 @@
 								<div class="content">
 									<p>数字人民币账户余额：100,000,000 元<br> id quod mazim placerat facer possim assum. </p>
 									<div class="subscribe-form">
-										<form name="form1" id="subs_form" method="post" action="contact.php">
 											<label class="row">
 												<div class="col-2-3">
-													<div class="wrap-col">
-														<input type="text" name="name" id="name" placeholder="请输入您的出价（元）" required="required" />
+													<div class="wrap-col" id="input">
+													
 													</div>
 												</div>
 												<div class="col-1-3">
 													<div class="wrap-col">
-														<input class="button button-skin button-subscribe" type="submit" name="Submit" value="我要出价">
+														<button class="button button-skin button-subscribe" name="Submit" onclick="offer()">
+															举牌出价
+														</button>
+														<button class="button button-default button-subscribe"  name="Submit" onclick="window.history.go(-1)">
+															看看别的
+															</button>
 													</div>
 												</div>
 											</label>
-										</form>
 									</div>
 								</div>
 							</div>
@@ -145,32 +139,65 @@
     }
     const data = [
       {
-      title:"黄山",
+      title:"黄山·一览众山小",
       price:"￥7,000",
       author:"吴尧文",
       hash:"h827xh37i29fdb",
-      owner:"李雪琴",
+      owner:"g78h9j210ue2",
+	  timestamp:"2021-06-02",
+	  creater:"cf12ehj93f31k9",
+	  tokenid:"g8yy913eiy2e23",
+	  contract:"yh3818uy1",
+	  description:"吴尧文吸收了文艺复兴时期画家的精华，大胆的色彩上创新，使画作更为生动明快，同时背景的风景比例更大。在阴影部分使用透明颜料，在暗部、亮部之间形成大的反差，并使用不透明的高光。使会话看起来更逼真。因其结果接近眼睛所见。吴尧文是一个极富创新精神的艺术家，常常根据不同的色调的需要采用不同纹理的画布、不同色彩的画底作画，并采用直接画法和特殊技巧。",
       blockchain:"IRITA"},
       {
-      title:"颐和园",
+      title:"颐和园·最终幻想",
       price:"￥20,000",
       author:"吴尧文",
       hash:"bshu39u2316sd",
-      owner:"王建国",
-      blockchain:"IRITA"},
+      owner:"jnu524fas11e",
+      blockchain:"IRITA",
+	  timestamp:"2021-06-02",
+	  creater:"cf12ehj93f31k9",
+	  tokenid:"g8yy913eiy2e23",
+	  contract:"yh381k6754",
+	  description:"吴尧文吸收了文艺复兴时期画家的精华，大胆的色彩上创新，使画作更为生动明快，同时背景的风景比例更大。在阴影部分使用透明颜料，在暗部、亮部之间形成大的反差，并使用不透明的高光。使会话看起来更逼真。因其结果接近眼睛所见。吴尧文是一个极富创新精神的艺术家，常常根据不同的色调的需要采用不同纹理的画布、不同色彩的画底作画，并采用直接画法和特殊技巧。"
+	},
       {
-      title:"黄鹤楼",
+      title:"黄鹤楼·文化之巅",
       price:"￥13,000",
       author:"吴尧文",
       hash:"hf71hr7i812",
-      owner:"李诞",
-      blockchain:"IRITA"},
+      owner:"bi4d14gj75dg",
+	  timestamp:"2021-06-02",
+	  creater:"cf12ehj93f31k9",
+	  tokenid:"g8yy913eiy2e23",
+	  contract:"3t55718uy1",
+      blockchain:"IRITA",
+	  description:"吴尧文吸收了文艺复兴时期画家的精华，大胆的色彩上创新，使画作更为生动明快，同时背景的风景比例更大。在阴影部分使用透明颜料，在暗部、亮部之间形成大的反差，并使用不透明的高光。使会话看起来更逼真。因其结果接近眼睛所见。吴尧文是一个极富创新精神的艺术家，常常根据不同的色调的需要采用不同纹理的画布、不同色彩的画底作画，并采用直接画法和特殊技巧。"
+	},
   ];
   let num = getParameterByName("id");
   let imageString = `<div style="min-height: 650px">
     <img src="../images/digital-${num}.jpg"  style="width:100%"/>
     </div>`;
   $("#image").append(imageString)
-  let target = data[num];
+  $("#location").append(`<img src="../images/reality-${num}.jpg"  style="width:100%"/>`)
+  const target = data[num];
+  $("#title").append(`<h2>${target.title}</h2>`)
+  $("#description").append(`<p>${target.description}</p>`)
+  $("#author").append(`<h2>作者：${target.author}</h2>`)
+  $("#content").append(`<p>版权上链：${target.timestamp}</p>
+  <p>合约地址：${target.contract}</p>
+  <p>Token ID：${target.tokenid}</p>
+  <p>所有权人：${target.owner}</p>
+  <p>创建人地址：${target.creater}</p>
+  <p>区块链：${target.blockchain}</p>
+  `)
+  $("#input").append(`	<input type="text" name="name" id="name" placeholder="当前举牌价格为${target.price}" required="required" />`)
+
+  function offer(){
+	  window.location.href=`/offer.html?id=${target.hash}&price=${target.price}`
+  }
 </script>
 </html>

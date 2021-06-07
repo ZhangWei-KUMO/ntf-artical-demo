@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <title>NFT数字艺术品拍卖市场</title>
+    <link rel="stylesheet" href="https://www.jq22.com/jquery/bootstrap-3.3.4.css">
+    <link rel="stylesheet" href="css/timeNode.css" trpe="text/css">
+    <script src="https://cdn.bootcss.com/moment.js/2.19.4/locale/zh-cn.js"></script>
+
+</head>
+<body>
+    <div class="box">
+    </div>
+</body>
+<script src="https://www.jq22.com/jquery/jquery-2.1.1.js"></script>
+<script src="https://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+<script src="js/timeNode.js"></script>
+<script>
+    var myDate = new Date();
+    var year = myDate.getFullYear();    //获取完整的年份(4位,1970-????)
+    var month = myDate.getMonth()+1;       //获取当前月份(0-11,0代表1月)
+    var day = myDate.getDate(); 
+    var hour = myDate.getHours();  
+    var minutes = myDate.getMinutes();  
+
+    var option = {
+        "content":[
+            [
+                {
+                    "type":"body",
+                    "showDirection":"left",
+                    "contentTitle":`${year}年${month}月${day}日${hour-4}时${minutes}分`,
+                    "contentBody":"交易价：￥2100 账户地址:32bsy3yt2pysi12<br/>区块链：以太坊 TokenID:u9yhi2321s2<center>交易确认</center>"
+                }
+            ]    
+        ]     
+    };
+    var option2 = {
+        "content":[
+            [
+                {
+                    "type":"body",
+                    "showDirection":"right",
+                    "contentTitle":`${year}年${month}月${day}日${hour-3}时${minutes}分`,
+                    "contentBody":"交易价：￥3100 账户地址:bgfd24dsysi12<br/>区块链：Polkdot TokenID:u9yhi2321s2<center>交易确认</center>"
+                }
+            ]    
+        ]     
+    };
+    var option3 = {
+        "content":[
+            [
+                {
+                    "type":"body",
+                    "showDirection":"left",
+                    "contentTitle":`${year}年${month}月${day}日${hour-2}时${minutes}分`,
+                    "contentBody":"交易价：￥6600 账户地址:t4y66fed2pysid<br/>区块链：Near TokenID:u9yhi2321s2<center>交易确认</center>"
+                }
+            ]    
+        ]     
+    };
+    var option4 = {
+        "content":[
+            [
+                {
+                    "type":"body",
+                    "showDirection":"right",
+                    "contentTitle":`${year}年${month}月${day}日${hour-1}时${minutes}分`,
+                    "contentBody":"交易价：￥2600 账户地址:bhysued2pysid<br/>区块链：Near TokenID:u9yhi2321s2<center>交易确认</center>"
+                }
+            ]    
+        ]     
+    };
+    var option5 = {
+        "content":[
+            [
+                {
+                    "type":"body",
+                    "showDirection":"left",
+                    "contentTitle":`${year}年${month}月${day}日${hour}时${minutes}分`,
+                    "contentBody":"举牌价：￥2600 账户地址:t4y66fed2pysid<br/>区块链：Near TokenID:u9yhi2321s2<br/><center>无人举牌五秒后，系统将自动进入区块链共识</center>"
+                }
+            ]    
+        ]     
+    };
+	settingOption(option);
+    setTimeout(()=>{
+        settingOption(option2);
+    },1500)
+    setTimeout(()=>{
+        settingOption(option3);
+    },3000)
+    setTimeout(()=>{
+        settingOption(option4);
+    },4500)
+    setTimeout(()=>{
+        settingOption(option5);
+    },6000)
+</script>
+</html>
+
