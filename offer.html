@@ -67,18 +67,6 @@
                 {
                     "type":"body",
                     "showDirection":"right",
-                    "contentTitle":`${year}年${month}月${day}日${hour-1}时${minutes}分`,
-                    "contentBody":"交易价：￥2600 账户地址:bhysued2pysid<br/>区块链：Near TokenID:u9yhi2321s2<center>交易确认</center>"
-                }
-            ]    
-        ]     
-    };
-    var option5 = {
-        "content":[
-            [
-                {
-                    "type":"body",
-                    "showDirection":"left",
                     "contentTitle":`${year}年${month}月${day}日${hour}时${minutes}分`,
                     "contentBody":"举牌价：￥2600 账户地址:t4y66fed2pysid<br/>区块链：Near TokenID:u9yhi2321s2<br/><center>无人举牌五秒后，系统将自动进入区块链共识</center>"
                 }
@@ -96,11 +84,8 @@
         settingOption(option4);
     },4500)
     setTimeout(()=>{
-        settingOption(option5);
-    },6000)
-    setTimeout(()=>{
        window.location.href="/consus.html"
-    },12000)
+    },7500)
 </script>
 </html>
 

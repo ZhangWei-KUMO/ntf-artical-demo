@@ -1,50 +1,138 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>IRITA区块链共识中</title>
+<style>
+html, body {
+	height: 100%;
+}
 
-  <meta charset="UTF-8">
+body {
+	background-color: #000000;
+	margin: 0;
+	font-family: Helvetica, sans-serif;;
+	overflow: hidden;
+  position: relative;
+}
 
-  <title>NFT数字艺术品拍卖市场</title>
+a {
+	color: #ffffff;
+}
 
-    <style>
-#background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
+#info {
+	position: absolute;
+	width: 100%;
+	color: #ffffff;
+	padding: 5px;
+	font-family: Monospace;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	z-index: 1;
+}
+
+#menu {
+	/* position: absolute; */
+	bottom: 20px;
+	width: 100%;
   height: 100vh;
-  background: #fefefe;  
-  perspective: 900px;
-  border:1px solid #DDD;
-  background: #e8e8e8;
+	text-align: center;
+	font-family: verdana,Tahoma,Arial,Hei,"Microsoft Yahei",SimHei;
 }
 
-#app {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 200px;
-  height: 340px;
-  margin: -170px 0 0 -100px;  
-  background: url(bg/jpeg.jpeg) 0 0 / 200px 340px no-repeat;
-  box-shadow: -7px 10px 10px #333;
-  transform: rotateX(60deg) rotateY(3deg) rotateZ(-25deg);
-  transform-origin:50% 50%;
-  transition: all 1s;
+.element {
+	width: 320px;
+	height: 460px;
+	box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
+	border: 1px solid rgba(127,255,255,0.25);
+	text-align: center;
+	cursor: default;
+  background-color: rgba(0, 127, 127, 0.63); 
+  z-index: 100;
+  margin: 100px auto;
+  padding: 50px;
 }
-#background:hover #app {
-  transform: rotate3d(0,0,0,0deg);
-  box-shadow: -100px 100px 20px #fff;
+
+	.element .number {
+		top: 20px;
+		right: 20px;
+		font-size: 12px;
+		color: rgba(127,255,255,0.75);
+	}
+
+	.element .symbol {
+		top: 40px;
+		left: 0px;
+		right: 0px;
+		font-size: 90px;
+		font-weight: bold;
+		color: rgba(255,255,255,0.75);
+		text-shadow: 0 0 10px rgba(0,255,255,0.95);
+	}
+
+	.element .details {
+		bottom: 15px;
+		left: 0px;
+		right: 0px;
+		font-size: 12px;
+		color: rgba(127,255,255,0.75);
+	}
+
+img {
+  width: 150px;
+  display: block;
+  margin: 50px auto;
+}
+
+button {
+  margin-top: 20px;
+	color: rgba(127,255,255,0.75);
+	background: transparent;
+	outline: 1px solid rgba(127,255,255,0.75);
+	border: 0px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+button:hover {
+	background-color: rgba(0,255,255,0.5);
+}
+button:active {
+	color: #000000;
+	background-color: rgba(0,255,255,0.75);
 }
 </style>
-
-
 </head>
-
 <body>
-	<div id="background">
-		<div id="app" href="#"></div>
-	</div>
+<script src="js/three.min.js" ></script>
+<script src="js/tween.min.js" ></script>
+<script src="js/TrackballControls.js" ></script>
+<script src="js/CSS3DRenderer.js" ></script>
+
+<div id="container"></div>
+<div id="menu">
+<div class="element">
+  <div class="number">资产已上链，提交节点</div>
+  <div class="symbol">南京</div>
+  <div class="details">哈希值：sh7h39saj210ux02</div>
+  <img src="images/qr-green.png"/>
+  <div class="details">区块链：IRITA</div>
+  <div class="details" id="time"></div>
+  <a href="/">
+    <button>返回主页</button>
+  </a>
+</div>
+</div>
+
+<script>
+    var myDate = new Date();
+    var year = myDate.getFullYear();    //获取完整的年份(4位,1970-????)
+    var month = myDate.getMonth()+1;       //获取当前月份(0-11,0代表1月)
+    var day = myDate.getDate(); 
+    var hour = myDate.getHours();  
+    var minutes = myDate.getMinutes();  
+    document.getElementById("time").innerHTML= `确权时间：${year}年${month}月${day}日${hour}时${minutes}分`
+ </script>
 </body>
 </html>
